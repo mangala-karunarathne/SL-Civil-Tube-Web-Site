@@ -3,45 +3,99 @@
     <head>
         <title> SL Civil Tube</title>
         <link rel="stylesheet" href="web page.css">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+<body>
         <div class="container">
             <span class="title"><h2>SL Civil Tube</h2></span>
         </div>
         
         <ul class="A">
-            <li class="B"><a class="active" href="#first"> Home </a></li>
-            <li class="B"><a class="C" href="#second">Learn</a></li>
-            <li class="B"><a class="C" href="#third">Design</a></li>
-            <li class="B"><a class="C" href="#fourth">Consultancy</a></li>
-            <li class="B"><a class="C" href="#fifth">Information</a></li>   
+            <li class="B"><a class="C active" href="web page.html"> Home </a></li>
+            <li class="B"><a class="C" href="pages/Learn.html">Learn</a></li>
+            <li class="B"><a class="C" href="pages/Design.html">Design</a></li>
+            <li class="B"><a class="C" href="pages/Consultancy.html">Consultancy</a></li>
+            <li class="B"><a class="C" href="pages/Information.html">Information</a></li> 
+           
+            <!-- search bar -->
+            <input type = "text" id = "searchbar" placeholder = "Search...">
         </ul>
-    
-        
-        <div class="row">
-            <div class="column">
-            <h5 class="E"> Structural Engineering</h5>
-            <img src="p4.png" alt="Structural" style="width: 200px" height="250px">
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="images/p4.png" style="width:100%">
+              <div class="text">Structural Engineering</div>
             </div>
-            <div class="column">
-            <h5> Geotechnical Engineering</h5>
-            <img src="p3.png" alt="Geotechnical" style="width:200px" height="250px">
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="images/p3.png" style="width:100%">
+              <div class="text">Geotechnical Engineering</div>
             </div>
-            <div class="column">
-            <h5> Environmental Engineering</h5>
-            <img src="p2.png" alt="Environmental" style="width:200px" height="250px">
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="images/p2.png" style="width:100%">
+              <div class="text">Environmental Engineering</div>
             </div>
-            <div class="column">
-            <h5> Coastal Engineering</h5>
-            <img src="p1.png" alt="Coastal" style="width:200px" height="250px">
-            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/p1.png" style="width:100%">
+                <div class="text">Coastal Engineering</div>
+              </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
         </div>
-        <div>
-            <p> All the degree programs are going to be commenced as folows</p>
-        </div>
-    </body>
-    <footer>
+
+    <!-- script for slide manually -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+            
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+            
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+            
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+         
+    <!-- script for slide automatically  -->
+    <script>
+        let slideAutoIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideAutoIndex++;
+            if (slideAutoIndex > slides.length) {slideAutoIndex = 1}    
+            slides[slideAutoIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+    <footer class="footer">
         <p>&copy;2022. SL Civil Tube</p>
     </footer>
 </html>
