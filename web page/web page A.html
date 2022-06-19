@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SL Civil Tube</title>
+        <link rel="stylesheet" href="web page.css">
+        
+    </head>
+<body>
+        <div class="container">
+            <span class="title"><h2>SL Civil Tube</h2></span>
+        </div>
+        
+        <ul class="A">
+            <li class="B"><a class="active" href="web page.html"> Home </a></li>
+            <li class="B"><a class="C" href="pages/Learn.html">Learn</a></li>
+            <li class="B"><a class="C" href="pages/Design.html">Design</a></li>
+            <li class="B"><a class="C" href="pages/Consultancy.html">Consultancy</a></li>
+            <li class="B"><a class="C" href="pages/Information.html">Information</a></li>   
+        </ul>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="images/p4.png" style="width:100%">
+              <div class="text">Structural Engineering</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="images/p3.png" style="width:100%">
+              <div class="text">Geotechnical Engineering</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="images/p2.png" style="width:100%">
+              <div class="text">Environmental Engineering</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/p1.png" style="width:100%">
+                <div class="text">Coastal Engineering</div>
+              </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+        </div>
+            
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+            
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+            
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+            
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+            
+    <script>
+        let slideAutoIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideAutoIndex++;
+            if (slideAutoIndex > slides.length) {slideAutoIndex = 1}    
+            slides[slideAutoIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+    <footer class="footer">
+        <p>&copy;2022. SL Civil Tube</p>
+    </footer>
+</html>
