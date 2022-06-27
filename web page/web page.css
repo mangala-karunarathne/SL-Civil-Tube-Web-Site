@@ -152,9 +152,10 @@ img {vertical-align: middle;}
 }
 
 /* Caption text */
+
 .text {
-  color:  rgba(0,0,0,0.8);
-  font-size: 15px;
+  color:  white;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
   top: 8px;
@@ -208,9 +209,9 @@ img {vertical-align: middle;}
 }
 
 h1 {
-  margin-left: 10%;
   margin-top: 5%;
   color:blue;
+  text-align: center;
 }
 
 table {
@@ -263,4 +264,11 @@ tr:nth-child(even) {
 
 .card-container {
   padding: 2px 16px;
+}
+
+/*---slideshow img styles----*/
+.mySlides img {
+  width: 600px;
+  height: 400px;
+  border-radius: 5%;
 }
