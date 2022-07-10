@@ -1,6 +1,10 @@
 # **SL-Civil-Tube-Web-Site**
 
-### Web Design For Beginners, Centre for Open and Distance Learning (CODL) - conducted by Department of Information Technology, Faulty of Information Technology, University of Moratuwa
+### Course Name : Web Design For Beginners
+
+Conducted by, Centre for Open and Distance Learning (CODL)
+
+Department of Information Technology, Faulty of Information Technology, University of Moratuwa
 
 ## Introduction
  
