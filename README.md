@@ -4,7 +4,7 @@
 
 Conducted by, Centre for Open and Distance Learning (CODL)
 
-Department of Information Technology, Faulty of Information Technology, University of Moratuwa
+Department of Information Technology, Faculty of Information Technology, University of Moratuwa
 
 ## Introduction
  
